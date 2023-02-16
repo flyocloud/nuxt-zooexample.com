@@ -12,6 +12,6 @@
     "nuxt": "^3.2.0"
   },
   "dependencies": {
-    "@flyodev/nitrocms-nuxt3": "^1.0.0"
+    "@flyodev/nitrocms-nuxt3": "^1.0.1"
   }
 }
