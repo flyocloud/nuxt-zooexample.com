@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ['@flyodev/nitrocms-nuxt3'],
-    flyo: {
-      token: process.env.TOKEN
-    }
+  css: ["bootstrap/dist/css/bootstrap.min.css"], // add
+  modules: [
+    ['@flyodev/nitrocms-nuxt3']
+  ],
+  build: {
+    transpile: ['@flyodev/nitrocms-nuxt3', '@flyodev/nitrocms-js', '@flyodev/nitrocms-vue3']
+  }
 })
