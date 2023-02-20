@@ -10,9 +10,11 @@
           <NuxtLink 
             v-for="(item,key) in config.nav.items"
             :key="key"
-            class="me-3 py-2 text-dark text-decoration-none"
             :to="item.path"
-          >{{ item.label }}</NuxtLInk>
+            class="me-3 py-2 text-dark text-decoration-none"
+          >
+            {{ item.label }}
+          </NuxtLInk>
         </nav>
       </div>
     </header>

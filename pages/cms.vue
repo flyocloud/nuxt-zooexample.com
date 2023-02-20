@@ -8,7 +8,7 @@
 <script>
 export default {
   setup() {
-    const { page, error } = useFlyoPage(useRoute().path);
+    const { page, error } = useFlyoCurrentPage();
     return {
       page: page,
       error: error,
