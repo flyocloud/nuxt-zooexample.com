@@ -12,8 +12,7 @@
     "nuxt": "^3.2.0"
   },
   "dependencies": {
-    "@flyodev/nitrocms-nuxt3": "^1.0.9",
-    "@flyodev/nitrocms-vue3": "^1.0.3",
+    "@flyodev/nitrocms-nuxt3": "^1.0.10",
     "bootstrap": "^5.2.3"
   }
 }

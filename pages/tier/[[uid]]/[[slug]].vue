@@ -18,9 +18,9 @@ export default {
   async setup() {
     // get the uniqueid from the routing
     const uid = useRoute().params.uid
-    // 
+    // get the entity detail response
     const { response } = await useFlyoEntity(uid)
-
+    
     return {
       response: response,
     };
