@@ -1,5 +1,6 @@
 <template>
   <div class="py-5 px-5" v-if="config">
+    {{ config }}
     <header>
       <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
         <NuxtLink to="/" class="d-flex align-items-center text-dark text-decoration-none">
@@ -53,13 +54,18 @@
 </template>
 
 <script>
+import { useFlyoConfig } from '@flyodev/nitrocms-vue3'
+
 export default {
   setup() {
-    const { config, loading } = useFlyoConfig()
+    const { config, loading, fetchConfig } = useFlyoConfig()
+
+    console.log('vue fetch config')
+    fetchConfig()
 
     return {
-      config: config,
-      loading: loading,
+      config,
+      loading
     }
   },
 };
