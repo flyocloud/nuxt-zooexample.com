@@ -8,15 +8,17 @@
 
 <script>
 export default {
-  async setup() {
+  setup() {
     // resolve the current page using the routers current path (useRoute().path)
-    const { page, error, putContent, isEditable } = await useFlyoCurrentPage();
+    const { isLoading, response, error, putContent, isEditable } = useFlyoCurrentPage()
+
     return {
-      page: page,
-      error: error,
-      putContent: putContent,
-      isEditable: isEditable
-    };
+      isLoading,
+      page: response,
+      error,
+      putContent,
+      isEditable
+    }
   },
   methods: {
     async update() {
