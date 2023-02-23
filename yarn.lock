@@ -529,22 +529,18 @@
     "@babel/cli" "^7.0.0"
     superagent "^5.3.0"
 
-"@flyodev/nitrocms-nuxt3@^1.0.10":
+"@flyodev/nitrocms-nuxt3@./../nitrocms-nuxt3":
   version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-nuxt3/-/nitrocms-nuxt3-1.0.10.tgz#6403d8d065b87929667a675466d579ed31ac6eab"
-  integrity sha512-gjWgD6EwpuBE6CTVOt5vX7DLZ4zXr0G/q1ge4JZe6bNdxD9nWuFo4U0rTkwMqNkFMZnBuDk7MHCM/tRvY9YRdQ==
   dependencies:
     "@flyodev/nitrocms-js" "^1.0"
-    "@flyodev/nitrocms-vue3" "^1.0.3"
+    "@flyodev/nitrocms-vue3" "./../nitrocms-vue3"
     "@nuxt/kit" "^3.2.0"
     defu "^6.1.2"
 
-"@flyodev/nitrocms-vue3@^1.0.0", "@flyodev/nitrocms-vue3@^1.0.3":
+"@flyodev/nitrocms-vue3@./../nitrocms-vue3":
   version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-vue3/-/nitrocms-vue3-1.0.3.tgz#baeeb6d286d81989cecd394ea65f4c2559665e24"
-  integrity sha512-b7OmIX5ml1/53IG+ThwpSzVmnTOpWXF1tkvDCNFJuLf46ZqRreJNhPaYORlT8TSQm30fnaB6gGjmNzPAN6VMfA==
   dependencies:
-    "@flyodev/nitrocms-vue3" "^1.0.0"
+    "@flyodev/nitrocms-js" "^1.0"
 
 "@ioredis/commands@^1.1.1":
   version "1.2.0"
