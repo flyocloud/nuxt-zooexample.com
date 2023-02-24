@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  async setup() {
+  setup() {
     const { entity } = inject('flyo')
 
     // get the uniqueid from the routing
