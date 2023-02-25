@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtLoadingIndicator
-      height="10"
+      :height="10"
     />
     <div class="py-5 px-5" v-if="config">
       <header>
