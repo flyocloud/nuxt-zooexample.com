@@ -2,7 +2,7 @@
   <div>
     <!-- https://nuxt.com/docs/getting-started/error-handling#handling-errors -->
     <h1>Fehler</h1>
-    <p>{{ error.statusMessage }}</p>
+    <p>{{ error.statusMessage || error.message }}</p>
     <button type="button" @click="handleError">Zur Startseite</button>
   </div>
 </template>
