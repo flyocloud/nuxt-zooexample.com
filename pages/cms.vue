@@ -1,6 +1,6 @@
 <template>
   <div v-if="page">
-    <h1>{{ page.title }}</h1>
+    <h1 v-edit>{{ page.title }}</h1>
     <FlyoPage :page="page" />
     <button @click="update()" :disabled="!isEditable()">Update</button>
   </div>
@@ -8,16 +8,14 @@
 
 <script>
 export default {
-  setup() {
+  async setup() {
     // resolve the current page using the routers current path (useRoute().path)
-    const { isLoading, response, error, putContent, isEditable } = useFlyoCurrentPage()
+    const flyoPage = await useFlyoCurrentPage()
 
     return {
-      isLoading,
-      page: response,
-      error,
-      putContent,
-      isEditable
+      page: flyoPage.response,
+      isEditable: flyoPage.isEditable,
+      putContent: flyoPage.putContent
     }
   },
   methods: {

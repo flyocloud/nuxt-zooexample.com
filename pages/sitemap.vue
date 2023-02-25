@@ -10,16 +10,11 @@
 
 <script>
 export default {
-  setup() {
-    const { sitemap } = inject('flyo');
-    const { isLoading, response, error, fetch } = sitemap
-
-    fetch()
+  async setup() {
+    const { response: sitemap } = await useFlyoSitemap()
 
     return {
-      isLoading,
-      sitemap: response,
-      error
+      sitemap
     };
   }
 };

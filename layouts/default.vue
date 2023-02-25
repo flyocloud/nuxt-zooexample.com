@@ -1,12 +1,7 @@
 <template>
   <div>
-    <div v-if="configLoading">
-      Loading...
-    </div>
-    <div v-else-if="configError">
-      Error: {{ configError }}
-    </div>
-    <div class="py-5 px-5" v-else-if="config">
+    <NuxtLoadingIndicator/>
+    <div class="py-5 px-5" v-if="config">
       <header>
         <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
           <NuxtLink to="/" class="d-flex align-items-center text-dark text-decoration-none">
@@ -62,13 +57,11 @@
 
 <script>
 export default {
-  setup() {
-    const { config } = inject('flyo')
+  async setup() {
+    const config = await useFlyoConfig()
 
     return {
-      configLoading: config.isLoading,
-      config: config.response,
-      configError: config.error,
+      config: config.response
     }
   },
 };
