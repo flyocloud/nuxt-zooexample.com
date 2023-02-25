@@ -1,6 +1,8 @@
 <template>
   <div>
-    <NuxtLoadingIndicator/>
+    <NuxtLoadingIndicator
+      height="10"
+    />
     <div class="py-5 px-5" v-if="config">
       <header>
         <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
