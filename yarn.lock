@@ -522,9 +522,9 @@
   integrity sha512-oP+zFUjYNaMNmjTwlFtWep85hvwUu19cZklB3QsBOcZSs6y7hmH4LNCJ7075bsqzYaNvZFXJlAVaQ2ApITDXtw==
 
 "@flyodev/nitrocms-js@^1.0":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-js/-/nitrocms-js-1.0.3.tgz#241ebed49ce712b736ada3fbc74eda252d7a74fc"
-  integrity sha512-r9qRijzUJ87+wWPn+xpC/Ayvr9qsUblkZO+eugrD3i3CDcrZtsjH+Dc3dlgTXfdN4CxegNPFR+WGKWy0CdTF3w==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-js/-/nitrocms-js-1.0.4.tgz#84e18f8ca5ffd68ec4198c0189b3d123874e04a6"
+  integrity sha512-iSXtL2+3jBxCk8yK0c9rpqkAUHpSBKxjDGG1/XRMamPod+oq2lxZ2dsXDeQGirx31ARRcqEu5lLSowAFh+9xJA==
   dependencies:
     "@babel/cli" "^7.0.0"
     superagent "^5.3.0"

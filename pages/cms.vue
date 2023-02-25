@@ -1,6 +1,6 @@
 <template>
   <div v-if="page">
-    <h1 v-edit>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
     <FlyoPage :page="page" />
     <button @click="update()" :disabled="!isEditable()">Update</button>
   </div>
