@@ -27,7 +27,11 @@ export default {
     }
   },
   mounted() {
-    fetch(this.response.entity.entity_metric.api)
+    // Might not be set if user navigates to another page
+    // before request in setup got resolved
+    if (this.response?.entity?.entity_metric?.api) {
+      fetch(this.response.entity.entity_metric.api)
+    }
   }
 }
 </script>
