@@ -2,9 +2,6 @@
 export default defineNuxtConfig({
   css: ["bootstrap/dist/css/bootstrap.min.css"], // add
   modules: [
-    ['@flyodev/nitrocms-nuxt3']
+    ['@flyodev/nitrocms-nuxt']
   ],
-  build: {
-    transpile: ['@flyodev/nitrocms-nuxt3', '@flyodev/nitrocms-js', '@flyodev/nitrocms-vue3']
-  }
 })
