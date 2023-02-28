@@ -8,14 +8,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  async setup() {
-    const { response: sitemap } = await useFlyoSitemap()
-
-    return {
-      sitemap
-    };
-  }
-};
+<script setup>
+const { response: sitemap } = await useFlyoSitemap()
 </script>

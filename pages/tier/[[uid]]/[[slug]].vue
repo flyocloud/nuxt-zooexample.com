@@ -1,37 +1,22 @@
 <template>
-  <div v-if="response" class="container">
+  <div v-if="entity" class="container">
     <div class="row mt-3">
       <div class="col-6">
-        <img :src="response.model.image.source" class="img-fluid" />
+        <img :src="entity.model.image.source" class="img-fluid" />
       </div>
       <div class="col-6">
-        <h2>{{ response.entity.entity_teaser }}</h2>
-        <p class="mt-3">{{ response.model.description }}</p>
-        <p>&copy; {{ response.model.copyright }}</p>
+        <h2>{{ entity.entity.entity_teaser }}</h2>
+        <p class="mt-3">{{ entity.model.description }}</p>
+        <p>&copy; {{ entity.model.copyright }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  async setup() {
-    // get the uniqueid from the routing
-    const uid = useRoute().params.uid
+<script setup>
+// get the uniqueid from the routing
+const uid = useRoute().params.uid
 
-    // get the entity detail response
-    const { response } = await useFlyoEntity(uid)
-    
-    return {
-      response
-    }
-  },
-  mounted() {
-    // Might not be set if user navigates to another page
-    // before request in setup got resolved
-    if (this.response?.entity?.entity_metric?.api) {
-      fetch(this.response.entity.entity_metric.api)
-    }
-  }
-}
+// get the entity detail response
+const { response: entity } = await useFlyoEntity(uid)
 </script>
