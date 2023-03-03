@@ -16,10 +16,6 @@
 <script>
 export default {
   props: {
-    isEditable: {
-      type: Boolean,
-      default: true,
-    },
     config: {
       type: Object,
       default: () => {}
@@ -29,12 +25,12 @@ export default {
       default: () => {}
     },
     items: {
-      type: Object,
+      type: Array,
       default: () => []
     },
     slots: {
       type: Object,
-      default: () => []
+      default: () => {}
     },
   }
 }

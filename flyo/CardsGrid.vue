@@ -20,7 +20,7 @@
 <script>
 export default {
   props: {
-    config: {
+   config: {
       type: Object,
       default: () => {}
     },
@@ -29,12 +29,12 @@ export default {
       default: () => {}
     },
     items: {
-      type: Object,
+      type: Array,
       default: () => []
     },
     slots: {
       type: Object,
-      default: () => []
+      default: () => {}
     },
   }
 }
