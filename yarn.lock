@@ -801,26 +801,26 @@
   integrity sha512-oP+zFUjYNaMNmjTwlFtWep85hvwUu19cZklB3QsBOcZSs6y7hmH4LNCJ7075bsqzYaNvZFXJlAVaQ2ApITDXtw==
 
 "@flyodev/nitrocms-js@^1.0":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-js/-/nitrocms-js-1.0.6.tgz#3021568cda40ec45491e95e5055f7e02a8753d11"
-  integrity sha512-s1fbBKEVWaR8uBWJxw+f9Bbw3ews/v78kpDse3EgA2cZC4fs4QFlyhFAftfMJdqmdB1Hd5e69ImFq0X4xk/5Sw==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-js/-/nitrocms-js-1.0.7.tgz#ff02cc4b9f5ae85a0d8214f5658d5311ec1950fe"
+  integrity sha512-SHtXR5XloiM9SL+NbXWH1VMvdXa/VxPE4dRcI/jfS3GkqM+NPLNLCwbJoz3AlcCmwvarFasawFcXPc+a6qAgQQ==
   dependencies:
     "@babel/cli" "^7.0.0"
     superagent "^5.3.0"
 
 "@flyodev/nitrocms-nuxt@^1.0.8":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-nuxt/-/nitrocms-nuxt-1.0.9.tgz#49d60523591c0072c427d1f26c3c9f125245b991"
-  integrity sha512-4KoHxslSPQqiOjWo226cqvNZ9Y8BmtI+iagjime37sypNEfRtKi8JtsTvkvurCLycBOGpdwOfhMVUGb2B0pBKw==
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-nuxt/-/nitrocms-nuxt-1.0.11.tgz#192be6baf698c4ae0e0942e71fd936e7b167a879"
+  integrity sha512-x7qd0dM+xeMyPYAC3+dtSXuf1EPyxMbPGjLsTx5pQlpFuNG5Yi0ZleNyFGNNbag68QaO2eDNtj35SV+FBlbCkA==
   dependencies:
-    "@flyodev/nitrocms-vue3" "^1.0.13"
+    "@flyodev/nitrocms-vue3" "^1.0.14"
     "@nuxt/kit" "^3.2.0"
     defu "^6.1.2"
 
-"@flyodev/nitrocms-vue3@^1.0.13":
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-vue3/-/nitrocms-vue3-1.0.13.tgz#720a38d62c4626904a2bd5ac4e83931ace68f150"
-  integrity sha512-NlBCTJy5hEq2IiUix8bGDS5GR3sGpM5GzobvklHbt4m/AMj39ZUCS5X6Fy4hPD1qTz97w5OpNwm0rbcEDPSWKQ==
+"@flyodev/nitrocms-vue3@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-vue3/-/nitrocms-vue3-1.0.14.tgz#eb30a18149959d42c3050aa6a06c485e4cbd21cf"
+  integrity sha512-2kAEytps0sEbVv6T9yw7s0fyMndahX3cHF9WzxrM/hdZT1Do50HyRVwL/8sMYC0ejD0alUamd/FcGOvyAd8u/w==
   dependencies:
     "@flyodev/nitrocms-js" "^1.0"
 
@@ -2177,9 +2177,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.317"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.317.tgz#9a3d38a1a37f26a417d3d95dafe198ff11ed072b"
-  integrity sha512-JhCRm9v30FMNzQSsjl4kXaygU+qHBD0Yh7mKxyjmF0V8VwYVB6qpBRX28GyAucrM9wDCpSUctT6FpMUQxbyKuA==
+  version "1.4.319"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.319.tgz#75cfecf8bc4522d1450713db1f2096fe73991cdb"
+  integrity sha512-WeoI6NwZUgteKB+Wmn692S35QycwwNxwgTomNnoCJ79znBAjtBi6C/cIW62JkXmpJRX5rKNYSLDBdAM8l5fH0w==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
