@@ -6,3 +6,7 @@
 4. open browser with `localhost:3030`
 
 [Read more on dev.flyo.cloud/nitrocms/nuxt](https://dev.flyo.cloud/nitrocms/nuxt)
+
+## Development
+
+1. Editor Config: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig

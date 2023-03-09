@@ -7,7 +7,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
-    "lint": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint": "eslint --ext \".vue\" --ignore-path .gitignore .",
     "lintfix": "yarn lint --fix"
   },
   "devDependencies": {
