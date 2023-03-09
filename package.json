@@ -6,10 +6,14 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "start": "node .output/server/index.mjs"
+    "start": "node .output/server/index.mjs",
+    "lint": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lintfix": "yarn lint --fix"
   },
   "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
     "@types/node": "^18.13.0",
+    "eslint": "^8.35.0",
     "nuxt": "^3.2.0"
   },
   "dependencies": {
