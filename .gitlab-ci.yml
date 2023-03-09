@@ -1,0 +1,31 @@
+stages:
+ - deps
+ - test
+
+deps:install:
+  stage: deps
+  image: node:19
+  script:
+    - yarn install --frozen-lockfile --no-progress --production=false
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - "node_modules"
+
+test:lint:
+  stage: test
+  image: node:19
+  dependencies:
+    - deps:install
+  script:
+    - yarn lint
+
+test:cypress:
+  stage: test
+  image: 
+    name: cypress/included:12.7.0
+    entrypoint: [""]
+  dependencies:
+    - deps:install
+  script:
+    - yarn e2e
