@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container"
+    class="container wysiwyg"
     v-html="content.content"
   />
 </template>
@@ -27,3 +27,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.wysiwyg > h1 {
+  color: red;
+}
+</style>
