@@ -1,7 +1,7 @@
 <template>
   <div v-if="page">
     <h1>{{ page.title }}</h1>
-    <FlyoPage :page="page" />
+    <FlyoPage v-model:page="page" />
   </div>
 </template>
 

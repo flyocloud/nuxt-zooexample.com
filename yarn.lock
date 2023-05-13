@@ -490,19 +490,19 @@
     "@babel/cli" "^7.0.0"
     superagent "^5.3.0"
 
-"@flyodev/nitrocms-nuxt@^1.0.14":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-nuxt/-/nitrocms-nuxt-1.0.16.tgz#7d17be2c4c54759ebddb27880bb43a611a173c0a"
-  integrity sha512-cVaMs1jpA7E/3KuUpDBjP9DB/a8M0KWggpYwFncAKYsJ3Sfw2u4BdMPn6GwYQOdd4naOxEr50BUmZr45CmsqAA==
+"@flyodev/nitrocms-nuxt@^1.0.19":
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-nuxt/-/nitrocms-nuxt-1.0.19.tgz#9ff27f8f7a5576ca08af6858d5ece1a69596e702"
+  integrity sha512-o1GDQnsXyLpgLIhSORVOdGRIBbvZW0d2I1XlLpJ86+8HLjuLnYOdaSArnMBtbrFuk3yJdpCZHkhSxTmCd3VIPw==
   dependencies:
     "@flyodev/nitrocms-vue3" "^1.0.17"
     "@nuxt/kit" "^3.2.0"
     defu "^6.1.2"
 
 "@flyodev/nitrocms-vue3@^1.0.17":
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-vue3/-/nitrocms-vue3-1.0.17.tgz#61e8f57224e337794e9c326a4820852a5ef37b81"
-  integrity sha512-Ka1csLPxyw9hbJRqPx6FApoEfWNRKYRaC7I+MAxsbFNh+BH5Q4x06Ez6SejaTe/dW0rEiUbx6djmB4volFkV1A==
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@flyodev/nitrocms-vue3/-/nitrocms-vue3-1.0.18.tgz#73a696d6e58b28394dbbb6ecd5572fb2000a5d18"
+  integrity sha512-PQ9samvHmSVTj16aWiqEHW+ah6gP+BUUXCSqt//7kN3VXdRfI5odck1LexnEfo+bYSuCl/oLElvppkBlRfbz2A==
   dependencies:
     "@flyodev/nitrocms-js" "^1.0"
 
@@ -4881,9 +4881,9 @@ rollup-plugin-visualizer@^5.9.0:
     yargs "^17.5.1"
 
 rollup@^3.21.0, rollup@^3.21.5:
-  version "3.21.6"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.6.tgz#f5649ccdf8fcc7729254faa457cbea9547eb86db"
-  integrity sha512-SXIICxvxQxR3D4dp/3LDHZIJPC8a4anKMHd4E3Jiz2/JnY+2bEjqrOokAauc5ShGVNFHlEFjBXAXlaxkJqIqSg==
+  version "3.21.7"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.7.tgz#022ab47416712c93546f369abfb20da5fb8ed42e"
+  integrity sha512-KXPaEuR8FfUoK2uHwNjxTmJ18ApyvD6zJpYv9FOJSqLStmt6xOY84l1IjK2dSolQmoXknrhEFRaPRgOPdqCT5w==
   optionalDependencies:
     fsevents "~2.3.2"
 
