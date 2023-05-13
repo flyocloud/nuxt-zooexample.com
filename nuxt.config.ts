@@ -2,6 +2,6 @@
 export default defineNuxtConfig({
   css: ["bootstrap/dist/css/bootstrap.min.css"], // add
   modules: [["@flyodev/nitrocms-nuxt", {
-    //apiToken: 'ADD_YOUR_API_TOKEN_HERE'
+    apiToken: process.env.NODE_ENV !== 'production' ? 'DEV_TOKEN' : 'PRODUCTION_TOKEN'
   }]],
 });
