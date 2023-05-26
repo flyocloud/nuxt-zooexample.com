@@ -22,7 +22,7 @@
     "start-server-and-test": "^2.0.0"
   },
   "dependencies": {
-    "@flyo/nitro-nuxt": "^1.0.3",
+    "@flyo/nitro-nuxt": "^1.0.4",
     "bootstrap": "^5.2.3"
   }
 }
