@@ -1,7 +1,7 @@
 <template>
   <div
     class="container wysiwyg"
-    v-html="content.content"
+    v-html="content.content.html"
   />
 </template>
 
