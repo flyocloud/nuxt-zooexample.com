@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   css: ["bootstrap/dist/css/bootstrap.min.css"], // add
   modules: [["@flyo/nitro-nuxt", {
-    apiToken: process.env.NODE_ENV !== 'production' ? 'DEV_TOKEN' : 'PRODUCTION_TOKEN'
+    // either use the .env file or define here:
+    //apiToken: process.env.NODE_ENV !== 'production' ? 'DEV_TOKEN' : 'PRODUCTION_TOKEN'
   }]],
 });

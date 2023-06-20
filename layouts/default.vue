@@ -30,7 +30,7 @@
           </NuxtLink>
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
             <NuxtLink 
-              v-for="(item,key) in config.nav.items"
+              v-for="(item,key) in config.containers.nav.items"
               :key="key"
               :to="item.path"
               class="me-3 py-2 text-dark text-decoration-none"
