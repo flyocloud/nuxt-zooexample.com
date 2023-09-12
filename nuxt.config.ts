@@ -5,4 +5,5 @@ export default defineNuxtConfig({
     // either use the .env file or define here:
     //apiToken: process.env.NODE_ENV !== 'production' ? 'DEV_TOKEN' : 'PRODUCTION_TOKEN'
   }]],
+  ssr: true
 });

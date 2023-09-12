@@ -32,7 +32,7 @@
             <NuxtLink 
               v-for="(item,key) in config.containers.nav.items"
               :key="key"
-              :to="item.path"
+              :to="item.href"
               class="me-3 py-2 text-dark text-decoration-none"
             >
               {{ item.label }}
