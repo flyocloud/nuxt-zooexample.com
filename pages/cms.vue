@@ -1,6 +1,9 @@
 <template>
-  <div v-if="page">
-    <h1>{{ page.title }}</h1>
+  <div
+    v-if="page"
+    class="space-y-8"
+  >
+
     <FlyoPage v-model:page="page" />
   </div>
 </template>

@@ -1,35 +1,39 @@
 <template>
-  <div v-bind="editable(block)" class="row row-cols-2">
-    <div
-      v-for="item in items"
-      :key="item.title"
-      class="col"
+  <div
+    v-bind="editable(block)"
+    class="my-6 grid gap-6 sm:my-8 md:grid-cols-2"
+  >
+    <article
+      v-for="(item, index) in items"
+      :key="item.link?.entity_unique_id || item.title"
+      :style="{ animationDelay: `${Math.min(index * 90, 360)}ms` }"
+      class="reveal-rise group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-lg shadow-slate-200/60 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
-      <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-          <div class="my-3 py-3">
-            <h2 class="display-5">
-              {{ item.title }}
-            </h2>
-            <p class="lead">
-              {{ item.teaser }}
-            </p>
-            <NuxtLink :to="`tier/${item.link.entity_unique_id}/${item.link.entity_slug}`">
-              More
-            </NuxtLink>
-          </div>
-          <div
-            class="bg-dark shadow-sm mx-auto"
-            style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"
-          >
-            <img
-              :src="`${item.image.source}/filter/600x600`"
-              class="img-fluid"
-            >
-          </div>
-        </div>
+      <div class="overflow-hidden rounded-2xl bg-slate-100">
+        <img
+          :src="`${item.image.source}/filter/900x900`"
+          :alt="item.title"
+          class="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-64"
+        >
       </div>
-    </div>
+
+      <div class="p-3 sm:p-4">
+        <h2 class="text-2xl font-bold text-slate-900">
+          {{ item.title }}
+        </h2>
+        <p class="mt-2 text-sm leading-6 text-slate-600">
+          {{ item.teaser }}
+        </p>
+        <NuxtLink
+          :to="`/tier/${item.link.entity_unique_id}/${item.link.entity_slug}`"
+          class="mt-4 inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600"
+        >
+          Discover animal
+        </NuxtLink>
+      </div>
+
+      <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-sky-200/40 opacity-0 blur-2xl transition duration-300 group-hover:opacity-100" />
+    </article>
   </div>
 </template>
 

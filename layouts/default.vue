@@ -1,119 +1,102 @@
 <template>
-  <div>
+  <div class="min-h-screen">
     <NuxtLoadingIndicator
-      :height="10"
+      :height="4"
+      color="#0f766e"
     />
+
     <div
       v-if="config"
-      class="py-5 px-5"
+      class="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8"
     >
-      <header>
-        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <header class="reveal-soft rounded-3xl border border-sky-100/80 bg-white/85 p-5 shadow-xl shadow-slate-200/60 backdrop-blur">
+        <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <NuxtLink
             to="/"
-            class="d-flex align-items-center text-dark text-decoration-none"
+            class="group inline-flex items-center gap-3"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="32"
-              class="me-2"
-              viewBox="0 0 118 94"
-              role="img"
-            ><title>Bootstrap</title><path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-              fill="currentColor"
-            /></svg>
-            <span class="fs-4">Flyo Zoo Headless CMS</span>
+            <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-300 via-sky-300 to-cyan-300 text-slate-900 shadow-md shadow-slate-300/60">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M12 2.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75Z" />
+                <path d="M6.03 5.28a.75.75 0 0 1 1.06 0l1.06 1.06a.75.75 0 0 1-1.06 1.06L6.03 6.34a.75.75 0 0 1 0-1.06Z" />
+                <path d="M17.91 5.28a.75.75 0 0 1 0 1.06l-1.06 1.06a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0Z" />
+                <path d="M4.5 11.25a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1 0-1.5h1.5Z" />
+                <path d="M21 11.25a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1 0-1.5H21Z" />
+                <path d="M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+                <path d="M6.97 16.59a.75.75 0 0 1 1.06 0l1.06 1.07a.75.75 0 1 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.07Z" />
+                <path d="M16.91 16.59a.75.75 0 0 1 0 1.07l-1.06 1.06a.75.75 0 1 1-1.06-1.06l1.06-1.07a.75.75 0 0 1 1.06 0Z" />
+                <path d="M12 19.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 12 19.5Z" />
+              </svg>
+            </span>
+            <span>
+              <span class="block text-xs font-semibold uppercase tracking-[0.24em] text-emerald-700/90">Headless CMS Demo</span>
+              <span class="block text-2xl font-bold leading-tight text-slate-900">Flyo Zoo</span>
+            </span>
           </NuxtLink>
-          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <NuxtLink 
-              v-for="(item,key) in config.containers.nav.items"
+
+          <nav class="flex flex-wrap items-center gap-2">
+            <NuxtLink
+              v-for="(item, key) in navItems"
               :key="key"
-              :to="item.href"
-              class="me-3 py-2 text-dark text-decoration-none"
+              :to="normalizeHref(item.href)"
+              class="rounded-full px-4 py-2 text-sm font-semibold transition"
+              :class="isActiveLink(item.href) ? 'bg-teal-100 text-teal-950 ring-1 ring-teal-300 hover:bg-teal-100 hover:text-teal-950' : 'text-slate-700 hover:bg-sky-100 hover:text-sky-900'"
             >
               {{ item.label }}
-            </NuxtLInk>
+            </NuxtLink>
           </nav>
         </div>
       </header>
 
-      <main>
-        <slot /> 
+      <main class="reveal-rise mt-8 flex-1">
+        <slot />
       </main>
 
-      <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="row">
-          <div class="col-12 col-md">
-            <small class="d-block mb-3 text-muted">&copy; 2017–2023 Flyo Inc.</small>
+      <footer class="reveal-rise-delay mt-12 rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-lg shadow-slate-200/50">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Flyo Zoo</p>
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              A playful Nuxt demo powered by Flyo blocks and now styled with Tailwind v4.
+            </p>
+            <small class="mt-4 block text-xs text-slate-400">&copy; 2017-2026 Flyo Inc.</small>
           </div>
-          <div class="col-6 col-md">
-            <h5>Features</h5>
-            <ul class="list-unstyled text-small">
-              <li class="mb-1">
+
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">Explore</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li>
                 <NuxtLink
                   to="/sitemap"
-                  class="link-secondary text-decoration-none"
+                  class="transition hover:text-teal-700"
                 >
                   Sitemap
                 </NuxtLink>
               </li>
-              <li class="mb-1">
-                <a
-                  class="link-secondary text-decoration-none"
-                  href="#"
-                >Random feature</a>
-              </li>
-              <li class="mb-1">
-                <a
-                  class="link-secondary text-decoration-none"
-                  href="#"
-                >Team feature</a>
-              </li>
-              <li class="mb-1">
-                <a
-                  class="link-secondary text-decoration-none"
-                  href="#"
-                >Stuff for developers</a>
-              </li>
-              <li class="mb-1">
-                <a
-                  class="link-secondary text-decoration-none"
-                  href="#"
-                >Another one</a>
+              <li>
+                <NuxtLink
+                  to="/"
+                  class="transition hover:text-teal-700"
+                >
+                  Zoo Overview
+                </NuxtLink>
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-              <li class="mb-1">
-                <a
-                  class="link-secondary text-decoration-none"
-                  href="#"
-                >Resource</a>
-              </li>
-              <li class="mb-1">
-                <a
-                  class="link-secondary text-decoration-none"
-                  href="#"
-                >Resource name</a>
-              </li>
-              <li class="mb-1">
-                <a
-                  class="link-secondary text-decoration-none"
-                  href="#"
-                >Another resource</a>
-              </li>
-              <li class="mb-1">
-                <a
-                  class="link-secondary text-decoration-none"
-                  href="#"
-                >Final resource</a>
-              </li>
+
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">Built With</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li>Nuxt 4</li>
+              <li>Tailwind CSS v4</li>
+              <li>Flyo Headless CMS</li>
             </ul>
           </div>
         </div>
@@ -122,14 +105,68 @@
   </div>
 </template>
 
-<script>
-export default {
-  async setup() {
-    const config = await useFlyoConfig()
+<script setup>
+const route = useRoute()
+const { response: config } = await useFlyoConfig()
 
-    return {
-      config: config.response
+const navItems = config?.containers?.nav?.items ?? []
+
+const normalizeHref = (href = "") => {
+  if (!href) {
+    return "/"
+  }
+
+  if (/^https?:\/\//.test(href)) {
+    return href
+  }
+
+  return href.startsWith("/") ? href : `/${href}`
+}
+
+const normalizePath = (path = "/") => {
+  const sanitized = path.replace(/\/+$|\?.*$|#.*$/g, "")
+  return sanitized.length ? sanitized : "/"
+}
+
+const getTargetPath = (href = "") => {
+  const target = normalizeHref(href)
+
+  if (/^https?:\/\//.test(target)) {
+    return null
+  }
+
+  return normalizePath(target)
+}
+
+const activePath = computed(() => {
+  const currentPath = normalizePath(route.path)
+  let bestMatch = ""
+
+  for (const item of navItems) {
+    const targetPath = getTargetPath(item.href)
+
+    if (!targetPath) {
+      continue
     }
-  },
-};
+
+    if (targetPath === "/") {
+      if (currentPath === "/" && bestMatch.length < 1) {
+        bestMatch = "/"
+      }
+      continue
+    }
+
+    if (currentPath === targetPath || currentPath.startsWith(`${targetPath}/`)) {
+      if (targetPath.length > bestMatch.length) {
+        bestMatch = targetPath
+      }
+    }
+  }
+
+  return bestMatch
+})
+
+const isActiveLink = (href = "") => {
+  return getTargetPath(href) === activePath.value
+}
 </script>

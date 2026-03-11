@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#__nuxt {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1100px 500px at 0% -20%, #bae6fd66, transparent 70%),
+    radial-gradient(1100px 600px at 100% -20%, #a7f3d066, transparent 70%),
+    #f9fafb;
+  color: #1f2937;
+  font-family: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+a {
+  color: inherit;
+}
+
+.wysiwyg > * + * {
+  margin-top: 1rem;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal-rise {
+  animation: rise-in 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal-rise-delay {
+  animation: rise-in 750ms 140ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal-soft {
+  animation: soft-in 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-rise,
+  .reveal-rise-delay,
+  .reveal-soft {
+    animation: none !important;
+  }
+}
