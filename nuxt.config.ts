@@ -1,9 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ["bootstrap/dist/css/bootstrap.min.css"], // add
+  css: ["bootstrap/dist/css/bootstrap.min.css"],
   modules: [["@flyo/nitro-nuxt", {
-    // either use the .env file or define here:
-    //apiToken: process.env.NODE_ENV !== 'production' ? 'DEV_TOKEN' : 'PRODUCTION_TOKEN'
+    apiToken: process.env.FLYO_API_TOKEN,
+    liveEdit: process.env.FLYO_LIVE_EDIT === "true",
+    registerPageRoutes: true,
+    defaultPageRoute: "cms",
   }]],
   ssr: true
 });

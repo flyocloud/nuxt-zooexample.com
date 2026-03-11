@@ -1,9 +1,16 @@
-# Flyo Nitro Nuxt3 Example
+# Flyo Nitro Nuxt4 Example
 
-1. `yarn install`
-2. add `apiToken` to `nuxt.config.ts`
+1. create `.env` from `.env.example` and set `FLYO_API_TOKEN`
+2. `yarn install`
 3. `yarn dev`
 4. open browser with `localhost:3030`
+
+## Environment
+
+```bash
+FLYO_API_TOKEN=your-token
+FLYO_LIVE_EDIT=true
+```
 
 ## Development
 

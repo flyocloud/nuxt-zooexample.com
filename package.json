@@ -13,16 +13,17 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@nuxt/kit": "^4.3.1",
     "@nuxt/eslint-config": "^0.1.1",
     "@types/node": "^18.13.0",
     "cypress": "^12.7.0",
     "eslint": "^8.35.0",
     "husky": "^8.0.0",
-    "nuxt": "^3.2.0",
+    "nuxt": "^4.3.1",
     "start-server-and-test": "^2.0.0"
   },
   "dependencies": {
-    "@flyo/nitro-nuxt": "^1.0.7",
+    "@flyo/nitro-nuxt": "^2.0.0",
     "bootstrap": "^5.2.3"
   }
 }
