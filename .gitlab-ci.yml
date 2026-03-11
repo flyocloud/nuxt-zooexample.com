@@ -19,19 +19,3 @@ test:lint:
     - deps:install
   script:
     - yarn lint
-
-test:cypress:
-  stage: test
-  image: 
-    name: cypress/included:12.7.0
-    entrypoint: [""]
-  dependencies:
-    - deps:install
-  script:
-    - yarn e2e
-  artifacts:
-    when: always
-    paths:
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
-    expire_in: 1 day

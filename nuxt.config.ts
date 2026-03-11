@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   css: ["bootstrap/dist/css/bootstrap.min.css"],
   modules: [["@flyo/nitro-nuxt", {
     apiToken: process.env.FLYO_API_TOKEN,
-    liveEdit: process.env.FLYO_LIVE_EDIT === "true",
+    liveEdit: true,
     registerPageRoutes: true,
     defaultPageRoute: "cms",
   }]],

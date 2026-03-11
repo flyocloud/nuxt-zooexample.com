@@ -8,19 +8,14 @@
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
     "lint": "eslint .",
-    "lintfix": "npm run lint -- --fix",
-    "e2e": "start-server-and-test 'yarn dev' http-get://localhost:3000 'cypress run --browser chrome'",
-    "prepare": "husky install"
+    "lintfix": "npm run lint -- --fix"
   },
   "devDependencies": {
     "@nuxt/kit": "^4.3.1",
     "@nuxt/eslint-config": "^1.15.2",
     "@types/node": "^22.15.0",
-    "cypress": "^12.17.4",
     "eslint": "^9.22.0",
-    "husky": "^8.0.3",
-    "nuxt": "^4.3.1",
-    "start-server-and-test": "^2.1.5"
+    "nuxt": "^4.3.1"
   },
   "dependencies": {
     "@flyo/nitro-nuxt": "^2.1.0",

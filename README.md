@@ -15,7 +15,6 @@ FLYO_LIVE_EDIT=true
 ## Development
 
 - Editor Config: Editor Config: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
-- Cypress: Add Cypress run suite `yarn cypress open` test without suite `yarn cypress run`
 - Link: Run `yarn lint` to lint your code, and optiona `yarn lintfix` to apply auto fix 
 
 ## Documentation

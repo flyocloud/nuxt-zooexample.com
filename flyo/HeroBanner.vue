@@ -24,29 +24,27 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    block: {
-      type: Object,
-      default: () => ({})
-    },
-    config: {
-      type: Object,
-      default: () => {}
-    },
-    content: {
-      type: Object,
-      default: () => {}
-    },
-    items: {
-      type: Array,
-      default: () => []
-    },
-    slots: {
-      type: Object,
-      default: () => {}
-    },
-  }
-}
+<script setup>
+defineProps({
+  block: {
+    type: Object,
+    default: () => ({})
+  },
+  config: {
+    type: Object,
+    default: () => ({})
+  },
+  content: {
+    type: Object,
+    default: () => ({})
+  },
+  items: {
+    type: Array,
+    default: () => []
+  },
+  slots: {
+    type: Object,
+    default: () => ({})
+  },
+})
 </script>
