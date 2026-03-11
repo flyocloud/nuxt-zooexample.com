@@ -1,5 +1,5 @@
 <template>
-  <div class="row row-cols-2">
+  <div v-bind="editable(block)" class="row row-cols-2">
     <div
       v-for="item in items"
       :key="item.title"
@@ -36,7 +36,11 @@
 <script>
 export default {
   props: {
-   config: {
+    block: {
+      type: Object,
+      default: () => ({})
+    },
+    config: {
       type: Object,
       default: () => {}
     },

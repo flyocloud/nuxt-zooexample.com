@@ -7,5 +7,6 @@ export default defineNuxtConfig({
     registerPageRoutes: true,
     defaultPageRoute: "cms",
   }]],
-  ssr: true
+  ssr: true,
+  compatibilityDate: "2026-03-11",
 });
