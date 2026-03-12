@@ -9,9 +9,6 @@
 
     <div class="relative grid items-center gap-8 lg:grid-cols-2">
       <div class="order-2 lg:order-1">
-        <p class="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">
-          Featured Animal
-        </p>
         <h1 class="mt-4 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
           {{ content.title }}
         </h1>

@@ -64,9 +64,8 @@
           <div>
             <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Flyo Zoo</p>
             <p class="mt-3 text-sm leading-6 text-slate-600">
-              A playful Nuxt demo powered by Flyo blocks and now styled with Tailwind v4.
+              A playful Nuxt demo powered by <a href="https://flyo.ch" class="underline">Flyo Nitro CMS</a>.
             </p>
-            <small class="mt-4 block text-xs text-slate-400">&copy; 2017-2026 Flyo Inc.</small>
           </div>
 
           <div>

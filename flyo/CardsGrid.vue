@@ -26,9 +26,9 @@
         </p>
         <NuxtLink
           :to="`/tier/${item.link.entity_unique_id}/${item.link.entity_slug}`"
-          class="mt-4 inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600"
+          class="mt-4 px-4 py-2 inline-flex items-center rounded-full bg-teal-100 text-teal-950 ring-1 ring-teal-300 hover:bg-teal-100 hover:text-teal-950"
         >
-          Discover animal
+          Mehr erfahren
         </NuxtLink>
       </div>
 

@@ -1,7 +1,7 @@
 <template>
   <article
     v-bind="editable(block)"
-    class="wysiwyg my-6 mx-auto max-w-3xl rounded-3xl border border-slate-200/80 bg-white/95 p-6 text-slate-700 shadow-lg shadow-slate-200/50 sm:my-8 sm:p-8"
+    class="wysiwyg my-6 mx-auto rounded-3xl border border-slate-200/80 bg-white/95 p-6 text-slate-700 shadow-lg shadow-slate-200/50 sm:my-8 sm:p-8"
     v-html="content.content.html"
   />
 </template>
