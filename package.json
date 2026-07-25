@@ -20,6 +20,6 @@
     "tailwindcss": "^4.2.1"
   },
   "dependencies": {
-    "@flyo/nitro-nuxt": "^2.1.2"
+    "@flyo/nitro-nuxt": "^2.2.0"
   }
 }
