@@ -11,7 +11,7 @@
     >
       <div class="overflow-hidden rounded-2xl bg-slate-100">
         <img
-          :src="`${item.image.source}/filter/900x900`"
+          :src="`${item.image.source}?w=900&h=900`"
           :alt="item.title"
           class="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-64"
         >
