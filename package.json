@@ -11,15 +11,16 @@
     "lintfix": "npm run lint -- --fix"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^1.15.2",
-    "@nuxt/kit": "^4.3.1",
-    "@tailwindcss/vite": "^4.2.1",
-    "@types/node": "^22.19.15",
-    "eslint": "^9.39.4",
+    "@nuxt/eslint-config": "^1.17.0",
+    "@nuxt/kit": "^4.5.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^22.20.1",
+    "eslint": "^9.39.5",
     "nuxt": "^4.3.1",
     "tailwindcss": "^4.2.1"
   },
   "dependencies": {
-    "@flyo/nitro-nuxt": "^2.2.0"
+    "@flyo/nitro-nuxt": "^2.3.0",
+    "@flyo/nitro-typescript": "^1.7.0"
   }
 }

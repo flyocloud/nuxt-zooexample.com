@@ -51,6 +51,32 @@
             >
               {{ item.label }}
             </NuxtLink>
+
+            <NuxtLink
+              to="/search"
+              class="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold transition"
+              :class="route.path === '/search' ? 'bg-teal-100 text-teal-950 ring-1 ring-teal-300' : 'text-slate-700 hover:bg-sky-100 hover:text-sky-900'"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="7"
+                />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              Search
+            </NuxtLink>
           </nav>
         </div>
       </header>
@@ -77,6 +103,14 @@
                   class="transition hover:text-teal-700"
                 >
                   Sitemap
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  to="/search"
+                  class="transition hover:text-teal-700"
+                >
+                  Search
                 </NuxtLink>
               </li>
               <li>

@@ -9,6 +9,13 @@ export default defineNuxtConfig({
     registerPageRoutes: true,
     defaultPageRoute: "cms",
   }]],
+  runtimeConfig: {
+    public: {
+      // Absolute origin used for the <loc> entries in /sitemap.xml. Falls back
+      // to the request origin, which is right in dev but not behind a proxy.
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "",
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },
