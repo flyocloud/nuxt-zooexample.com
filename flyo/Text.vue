@@ -1,34 +1,33 @@
 <template>
+  <!-- eslint-disable-next-line vue/no-v-html -- the CMS delivers the field as parsed HTML -->
   <article
-    v-bind="editable(block)"
+    v-if="block.content?.content?.html"
+    v-bind="editableAttrs"
     class="wysiwyg my-6 mx-auto rounded-3xl border border-slate-200/80 bg-white/95 p-6 text-slate-700 shadow-lg shadow-slate-200/50 sm:my-8 sm:p-8"
-    v-html="content.content.html"
+    v-html="block.content.content.html"
   />
 </template>
 
-<script setup>
-defineProps({
-  block: {
-    type: Object,
-    default: () => ({})
-  },
-  config: {
-    type: Object,
-    default: () => ({})
-  },
-  content: {
-    type: Object,
-    default: () => ({})
-  },
-  items: {
-    type: Array,
-    default: () => []
-  },
-  slots: {
-    type: Object,
-    default: () => ({})
-  },
+<script setup lang="ts">
+// The block schema already carries `config`, `content`, `items` and `slots`, so
+// `block` is the only prop worth declaring — read the rest off it. FlyoBlock
+// still passes those four individually, hence `inheritAttrs: false` so they do
+// not land on the root element as attributes. The wysiwyg field carries both
+// `html` and the TipTap `json` annotation; this renders the parsed HTML.
+import type { Block, BlockText } from '~/src/generated/flyo'
+
+defineOptions({ inheritAttrs: false })
+
+const props = withDefaults(defineProps<{
+  block?: BlockText
+}>(), {
+  block: () => ({}),
 })
+
+// `editable()` is declared against the base `block` schema, whose `slots` is a
+// map of slot objects — a block without slots types them as `{ _empty?: bool }`
+// instead, so widen for the call. It only ever reads `uid`.
+const editableAttrs = computed(() => editable(props.block as Block))
 </script>
 
 <style scoped>

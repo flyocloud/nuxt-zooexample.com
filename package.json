@@ -7,6 +7,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
+    "flyo:types": "npx -y openapi-typescript@latest \"https://api.flyo.cloud/nitro/v1/openapi/schemas?token=$FLYO_API_TOKEN\" -o ./src/generated/flyo.ts --root-types --root-types-no-schema-prefix --export-type",
     "lint": "eslint .",
     "lintfix": "npm run lint -- --fix"
   },
