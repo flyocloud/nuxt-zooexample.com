@@ -1,17 +1,17 @@
 <template>
   <section
     v-bind="editableAttrs"
-    class="my-6 relative overflow-hidden rounded-3xl border border-sky-100 bg-white/90 p-6 shadow-xl shadow-slate-200/60 sm:my-8 sm:p-8 lg:p-10"
+    class="my-6 relative overflow-hidden rounded-3xl border border-border bg-card p-6 sm:my-8 sm:p-8 lg:p-10"
   >
-    <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-sky-200/40 blur-2xl" />
-    <div class="pointer-events-none absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-emerald-200/30 blur-2xl" />
+    <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand/15 blur-2xl" />
+    <div class="pointer-events-none absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-brand/10 blur-2xl" />
 
     <div class="relative grid items-center gap-8 lg:grid-cols-2">
       <div class="order-2 lg:order-1">
-        <h1 class="mt-4 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
+        <h1 class="text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl">
           {{ block.content?.title }}
         </h1>
-        <p class="mt-4 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+        <p class="mt-4 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
           {{ block.content?.teaser }}
         </p>
       </div>
@@ -20,7 +20,7 @@
         v-if="block.content?.image?.source"
         class="order-1 lg:order-2"
       >
-        <div class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-2xl shadow-slate-300/60">
+        <div class="overflow-hidden rounded-2xl border border-border bg-muted shadow-lg shadow-black/5">
           <img
             :src="`${block.content.image.source}?w=1400&format=webp`"
             :alt="block.content.image.caption || block.content.title || 'Zoo spotlight image'"
@@ -32,7 +32,7 @@
         </div>
         <p
           v-if="block.content.image.copyright"
-          class="mt-2 text-right text-xs text-slate-400"
+          class="mt-2 text-right text-xs text-muted-foreground"
         >
           © {{ block.content.image.copyright }}
         </p>

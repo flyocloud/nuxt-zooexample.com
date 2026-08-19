@@ -1,12 +1,12 @@
 <template>
   <article
     v-if="entity"
-    class="rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-xl shadow-slate-200/60 sm:p-6 lg:p-8"
+    class="rounded-3xl border border-border bg-card p-4 sm:p-6 lg:p-8"
   >
     <nav
       v-if="breadcrumb.length"
       aria-label="Breadcrumb"
-      class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400"
+      class="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground"
     >
       <ol class="flex flex-wrap items-center gap-2">
         <li
@@ -21,13 +21,13 @@
           <NuxtLink
             v-if="crumb.href"
             :to="crumb.href"
-            class="transition hover:text-teal-700"
+            class="transition hover:text-foreground"
           >
             {{ crumb.title }}
           </NuxtLink>
           <span
             v-else
-            class="text-slate-500"
+            class="text-foreground/70"
           >
             {{ crumb.title }}
           </span>
@@ -35,7 +35,7 @@
         <li
           v-if="title"
           aria-current="page"
-          class="flex items-center gap-2 text-slate-500"
+          class="flex items-center gap-2 text-foreground/70"
         >
           <span
             v-if="breadcrumb.length"
@@ -52,7 +52,7 @@
     >
       <figure
         v-if="image"
-        class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100"
+        class="overflow-hidden rounded-2xl border border-border bg-muted"
       >
         <img
           :src="image"
@@ -63,28 +63,28 @@
         >
         <figcaption
           v-if="model.image?.caption || model.image?.copyright"
-          class="px-4 py-2 text-xs text-slate-500"
+          class="px-4 py-2 text-xs text-muted-foreground"
         >
           {{ [model.image?.caption, model.image?.copyright].filter(Boolean).join(' · ') }}
         </figcaption>
       </figure>
 
       <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
           Zoo Profile
         </p>
-        <h1 class="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+        <h1 class="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
           {{ title }}
         </h1>
         <p
           v-if="teaser"
-          class="mt-4 text-base leading-7 text-slate-600 sm:text-lg"
+          class="mt-4 text-base leading-7 text-muted-foreground sm:text-lg"
         >
           {{ teaser }}
         </p>
         <p
           v-if="model.long_text"
-          class="mt-5 text-base leading-7 text-slate-600"
+          class="mt-5 text-base leading-7 text-muted-foreground"
         >
           {{ model.long_text }}
         </p>
@@ -93,20 +93,20 @@
 
     <section
       v-if="hasHabitat"
-      class="mt-10 rounded-2xl border border-sky-100 bg-sky-50/60 p-5 sm:p-6"
+      class="mt-10 rounded-2xl border border-brand/20 bg-brand/5 p-5 sm:p-6"
     >
-      <h2 class="text-2xl font-bold text-slate-900">
+      <h2 class="text-2xl font-semibold tracking-tight text-foreground">
         {{ model.habitat_title || 'Lebensraum' }}
       </h2>
       <p
         v-if="model.habitat_teaser"
-        class="mt-2 text-base leading-7 text-slate-700"
+        class="mt-2 text-base leading-7 text-foreground/80"
       >
         {{ model.habitat_teaser }}
       </p>
       <p
         v-if="model.habitat_description"
-        class="mt-4 text-sm leading-6 text-slate-600"
+        class="mt-4 text-sm leading-6 text-muted-foreground"
       >
         {{ model.habitat_description }}
       </p>
@@ -114,7 +114,7 @@
 
     <footer
       v-if="meta?.updated_at"
-      class="mt-8 border-t border-slate-200 pt-4 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400"
+      class="mt-8 border-t border-border pt-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground"
     >
       Aktualisiert
       <time :datetime="new Date(meta.updated_at * 1000).toISOString()">

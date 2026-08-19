@@ -7,11 +7,11 @@
       v-for="(item, index) in block.items"
       :key="item.link?.entity_unique_id || item.title || index"
       :style="{ animationDelay: `${Math.min(index * 90, 360)}ms` }"
-      class="reveal-rise group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-lg shadow-slate-200/60 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+      class="reveal-rise group relative overflow-hidden rounded-3xl border border-border bg-card p-4 transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-black/5"
     >
       <div
         v-if="item.image?.source"
-        class="overflow-hidden rounded-2xl bg-slate-100"
+        class="overflow-hidden rounded-2xl bg-muted"
       >
         <img
           :src="`${item.image.source}?w=900&h=900&format=webp`"
@@ -24,22 +24,36 @@
       </div>
 
       <div class="p-3 sm:p-4">
-        <h2 class="text-2xl font-bold text-slate-900">
+        <h2 class="text-2xl font-semibold tracking-tight text-foreground">
           {{ item.title }}
         </h2>
-        <p class="mt-2 text-sm leading-6 text-slate-600">
+        <p class="mt-2 text-sm leading-6 text-muted-foreground">
           {{ item.teaser }}
         </p>
         <NuxtLink
           v-if="item.link?.routes?.detail"
           :to="String(item.link.routes.detail)"
-          class="mt-4 px-4 py-2 inline-flex items-center rounded-full bg-teal-100 text-teal-950 ring-1 ring-teal-300 hover:bg-teal-100 hover:text-teal-950"
+          class="mt-4 inline-flex items-center gap-1.5 rounded-2xl bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition hover:opacity-90"
         >
           Mehr erfahren
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14m-6-6 6 6-6 6" />
+          </svg>
         </NuxtLink>
       </div>
 
-      <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-sky-200/40 opacity-0 blur-2xl transition duration-300 group-hover:opacity-100" />
+      <div class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand/10 opacity-0 blur-2xl transition duration-300 group-hover:opacity-100" />
     </article>
   </div>
 </template>

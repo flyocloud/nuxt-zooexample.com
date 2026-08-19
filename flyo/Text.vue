@@ -3,7 +3,7 @@
   <article
     v-if="block.content?.content?.html"
     v-bind="editableAttrs"
-    class="wysiwyg my-6 mx-auto rounded-3xl border border-slate-200/80 bg-white/95 p-6 text-slate-700 shadow-lg shadow-slate-200/50 sm:my-8 sm:p-8"
+    class="wysiwyg my-6 mx-auto rounded-3xl border border-border bg-card p-6 text-foreground/80 sm:my-8 sm:p-8"
     v-html="block.content.content.html"
   />
 </template>
@@ -34,9 +34,9 @@ const editableAttrs = computed(() => editable(props.block as Block))
 .wysiwyg :deep(h1),
 .wysiwyg :deep(h2),
 .wysiwyg :deep(h3) {
-  color: #0f172a;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-weight: 600;
+  letter-spacing: -0.025em;
 }
 
 .wysiwyg :deep(h1) {
@@ -58,12 +58,12 @@ const editableAttrs = computed(() => editable(props.block as Block))
 }
 
 .wysiwyg :deep(a) {
-  color: #0f766e;
+  color: var(--brand);
   font-weight: 600;
   text-decoration: none;
 }
 
 .wysiwyg :deep(a:hover) {
-  color: #0f172a;
+  color: var(--foreground);
 }
 </style>

@@ -1,21 +1,21 @@
 <template>
   <section
     v-if="entries"
-    class="rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-lg shadow-slate-200/50 sm:p-8"
+    class="rounded-3xl border border-border bg-card p-6 sm:p-8"
   >
     <div class="flex flex-wrap items-end justify-between gap-4">
       <div>
-        <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">
+        <h1 class="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
           Zoo Sitemap
         </h1>
-        <p class="mt-2 text-sm text-slate-600">
+        <p class="mt-2 text-sm text-muted-foreground">
           Every page and animal in the live content feed.
         </p>
       </div>
 
       <a
         href="/sitemap.xml"
-        class="rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 transition hover:border-teal-300 hover:text-teal-700"
+        class="rounded-full border border-border px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground transition hover:border-brand/50 hover:text-brand"
       >
         sitemap.xml
       </a>
@@ -29,20 +29,20 @@
       >
         <NuxtLink
           :to="item.href"
-          class="group flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-sky-300 hover:bg-sky-50"
+          class="group flex items-center justify-between gap-4 rounded-2xl border border-border bg-background px-4 py-3 text-foreground transition hover:border-brand/40 hover:bg-accent"
         >
           <span>
             <span class="block font-medium">
               {{ item.entity_title }}
             </span>
-            <span class="mt-0.5 block text-xs text-slate-400">
+            <span class="mt-0.5 block text-xs text-muted-foreground">
               {{ item.href }}
             </span>
           </span>
           <time
             v-if="item.updated_at"
             :datetime="new Date(item.updated_at * 1000).toISOString()"
-            class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 transition group-hover:text-teal-600"
+            class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground transition group-hover:text-brand"
           >
             {{ formatDate(item.updated_at) }}
           </time>
